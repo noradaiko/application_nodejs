@@ -82,7 +82,7 @@ action :before_restart do
       :user => new_resource.owner,
       :group => new_resource.group,
       :node_dir => node['nodejs']['dir'],
-      :app_dir => new_resource.release_path,
+      :app_dir => new_resource.path + "/current",
       :entry => new_resource.entry_point,
       :environment => new_resource.environment
     )
